@@ -17,7 +17,47 @@ Rather than tracking day-to-day transactions, Nenya focuses on providing a clear
 - Frontend: Next.js with TypeScript
 - Backend: FastAPI
 - Database: PostgreSQL
-- Deployment: Currently local, cloud deployment coming soon
+- Infrastructure: OpenTofu (formerly Terraform Open Source)
+- CI/CD: GitHub Actions with ArgoCD
+- Observability: Argo Stack (Argo Workflows, Argo Events, Argo Rollouts)
+- Cloud Provider: AWS
+- LLM Integration: Open Source LLM (planning phase)
+
+## Infrastructure & DevOps
+The project uses modern DevOps practices and tools:
+- Infrastructure as Code (IaC) with OpenTofu
+- GitOps deployment flow with ArgoCD
+- Comprehensive observability with the Argo stack
+- Container orchestration with Kubernetes
+- Infrastructure monitoring and alerting
+
+## Future Features
+### AI Assistant Integration
+- Integration with open source LLMs for personalized financial insights
+- Real-time data analysis and recommendations
+- Privacy-focused approach: train on individual user data locally
+- Natural language interface for data exploration and analysis
+
+### Cloud Architecture
+- Multi-region AWS deployment for high availability
+- Kubernetes-based microservices architecture
+- Zero-trust security model
+- Data sovereignty and privacy compliance
+
+## Development Roadmap
+1. Core Financial Management Features
+2. Infrastructure Setup with OpenTofu
+3. CI/CD Pipeline Implementation
+4. Observability and Monitoring
+5. LLM Integration and Training
+6. Mobile Application Development
+
+## Architecture Decision Records
+Key architectural decisions and their rationales:
+- OpenTofu over Terraform Cloud: Open source flexibility and community alignment
+- ArgoCD for GitOps: Kubernetes-native, declarative deployments
+- AWS as primary cloud: Comprehensive services and market presence
+- Open Source LLM: Data privacy and customization capabilities
 
 ## Local Development
 
@@ -42,7 +82,7 @@ yarn install
 yarn dev
 ```
 
-Visit `http://localhost:3000` to see the application.
+Visit `http://localhost:3000` to see the frontend application. Visit `http:localhost:8000/docs` to see the Swagger docs.
 
 ## Project Status
 This project is actively under development. Current focus is on building core financial management features with a spreadsheet-like interface while maintaining data security and user privacy.
@@ -60,7 +100,6 @@ This project is currently in its early stages. If you're interested in contribut
 
 ## License
 Apache License - See LICENSE file for details
-
 
 
 ## Next Steps and TODO tracker
