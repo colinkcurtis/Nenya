@@ -15,7 +15,7 @@
         "module": "gunicorn",
         "args": [
           "--config",
-          "gunicorn.conf.py",
+          "${workspaceFolder}/backend/gunicorn.conf.py",
           "main:app"
         ],
         "cwd": "${workspaceFolder}/backend",
