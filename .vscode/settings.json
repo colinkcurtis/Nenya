@@ -3,6 +3,15 @@
     "python.defaultInterpreterPath": "${workspaceFolder}/nenya_env_1/bin/python",
     "[python]": {
       "editor.formatOnSave": true,
-      "editor.defaultFormatter": "ms-python.python"
-    }
+      "editor.defaultFormatter": "ms-python.black-formatter",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    "black-formatter.args": [
+      "--line-length",
+      "88"
+    ],
+    "nodejs.useSystemVersion": false,
+    "nodejs.nodeVersion": "18"
   }

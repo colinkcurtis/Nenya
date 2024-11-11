@@ -5,7 +5,6 @@
         "name": "Frontend: Next.js",
         "type": "node-terminal",
         "request": "launch",
-        "runtimeVersion": "18",
         "command": "nvm use 18 && cd ${workspaceFolder}/frontend && npm run dev",
         "skipFiles": ["<node_internals>/**"]
       },
