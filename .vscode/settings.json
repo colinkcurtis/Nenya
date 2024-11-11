@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": ["${workspaceFolder}/backend"],
+    "python.defaultInterpreterPath": "${workspaceFolder}/nenya_env_1/bin/python",
+    "[python]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "ms-python.python"
+    }
+  }

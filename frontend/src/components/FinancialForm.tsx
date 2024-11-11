@@ -14,7 +14,7 @@ export default function FinancialForm(props: Props) {
     const name = prompt('Income source name:');
     const amount = parseFloat(prompt('Monthly amount:') || '0');
     const frequency = prompt('Frequency (monthly/annual):') as 'monthly' | 'annual';
-    
+
     if (name && amount && frequency) {
       props.onUpdateIncome([...props.incomeSources, { name, amount, frequency }]);
     }

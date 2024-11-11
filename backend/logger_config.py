@@ -1,11 +1,12 @@
 import logging
 import sys
-from pathlib import Path
 from logging.handlers import RotatingFileHandler
+from pathlib import Path
 
 # Create logs directory if it doesn't exist
 LOG_DIR = Path(__file__).parent / "logs"
 LOG_DIR.mkdir(exist_ok=True)
+
 
 # Configure logging
 def setup_logger(name: str) -> logging.Logger:
@@ -14,7 +15,7 @@ def setup_logger(name: str) -> logging.Logger:
 
     # Format for logs
     formatter = logging.Formatter(
-        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     )
 
     # Console handler
@@ -24,14 +25,13 @@ def setup_logger(name: str) -> logging.Logger:
 
     # File handler
     file_handler = RotatingFileHandler(
-        LOG_DIR / "app.log",
-        maxBytes=1024 * 1024,  # 1MB
-        backupCount=5
+        LOG_DIR / "app.log", maxBytes=1024 * 1024, backupCount=5  # 1MB
     )
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
     return logger
+
 
 # Create main logger
 logger = setup_logger("nenya")

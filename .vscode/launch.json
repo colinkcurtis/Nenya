@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Frontend: Next.js",
+        "type": "node-terminal",
+        "request": "launch",
+        "runtimeVersion": "18",
+        "command": "nvm use 18 && cd ${workspaceFolder}/frontend && npm run dev",
+        "skipFiles": ["<node_internals>/**"]
+      },
+      {
+        "name": "Backend: FastAPI",
+        "type": "debugpy",
+        "request": "launch",
+        "module": "gunicorn",
+        "args": [
+          "--config",
+          "gunicorn.conf.py",
+          "main:app"
+        ],
+        "cwd": "${workspaceFolder}/backend",
+        "justMyCode": false,
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}/backend"
+        }
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Full Stack",
+        "configurations": ["Frontend: Next.js", "Backend: FastAPI"]
+      }
+    ]
+  }

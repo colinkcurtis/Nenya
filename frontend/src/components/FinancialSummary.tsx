@@ -9,8 +9,8 @@ interface Props {
 
 export default function FinancialSummary({ incomeSources, expenses }: Props) {
   const totalMonthlyIncome = incomeSources.reduce((total, source) => {
-    const monthlyAmount = source.frequency === 'annual' 
-      ? source.amount / 12 
+    const monthlyAmount = source.frequency === 'annual'
+      ? source.amount / 12
       : source.amount;
     return total + monthlyAmount;
   }, 0);

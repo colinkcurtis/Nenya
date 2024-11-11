@@ -16,15 +16,15 @@ export default function BudgetPage() {
         Track your monthly financial snapshot here.
       </p>
       <div className="grid gap-6 md:grid-cols-2">
-        <FinancialForm 
+        <FinancialForm
           incomeSources={incomeSources}
           expenses={expenses}
           onUpdateIncome={setIncomeSources}
           onUpdateExpenses={setExpenses}
         />
-        <FinancialSummary 
-          incomeSources={incomeSources} 
-          expenses={expenses} 
+        <FinancialSummary
+          incomeSources={incomeSources}
+          expenses={expenses}
         />
       </div>
     </div>

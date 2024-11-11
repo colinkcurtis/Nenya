@@ -1,7 +1,8 @@
-from sqlalchemy import Column, Integer, JSON, DateTime
-from sqlalchemy.sql import func
 from database import Base
 from logger_config import logger
+from sqlalchemy import JSON, Column, DateTime, Integer
+from sqlalchemy.sql import func
+
 
 class Budget(Base):
     __tablename__ = "budgets"
@@ -16,4 +17,6 @@ class Budget(Base):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        logger.debug(f"Creating new Budget object with {len(kwargs.get('income_sources', []))} income sources and {len(kwargs.get('expenses', []))} expenses")
+        logger.info(
+            f"Creating new Budget object with {len(kwargs.get('income_sources', []))} income sources and {len(kwargs.get('expenses', []))} expenses"
+        )
