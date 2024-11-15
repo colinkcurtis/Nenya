@@ -1,11 +1,9 @@
 # Nenya Financial Manager
 
-> "For this is the Ring of Water, and with it you may keep your realm fair and protected from the hurts of time" - Galadriel on Nenya
+> "For this is the Ring of Water, and with it you may keep your realm fair and protected from the hurts of time"
 
 ## About
-Nenya is a personal financial management tool designed with simplicity and security in mind. Just as the Elven ring Nenya preserved and protected the realm of Lothlórien, this application helps preserve and protect your financial well-being.
-
-Rather than tracking day-to-day transactions, Nenya focuses on providing a clear overview of your financial landscape. Think of it as your personal financial command center, where you can visualize and adjust your monthly financial cadence with spreadsheet-like flexibility but modern web application convenience.
+Nenya is a personal financial management tool designed with simplicity and security in mind.
 
 ## Features
 - Interactive financial data grid with spreadsheet-like functionality
